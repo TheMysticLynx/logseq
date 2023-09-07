@@ -185,7 +185,7 @@ export const LogseqQuickSearch = observer(
       }
 
       // New page or whiteboard option when no exact match
-      if (!searchResult?.pages?.some(p => p.toLowerCase() === q.toLowerCase()) && q) {
+      if (!searchResult?.pages?.some(p => p.toLowerCase() === q.trim().toLowerCase()) && q) {
         options.push(
           {
             actionIcon: 'circle-plus',
